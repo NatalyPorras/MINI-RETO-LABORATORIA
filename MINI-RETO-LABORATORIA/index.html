@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Laboratrivia</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+            <h1> LABORATRIVIA </h1>
+            <h3 id="bienvenida"> BIENVENID@ </h3><!-- Este elemento nos permite agregar el nombre del usuario -->
+        </div>
+        
+        <!-- CABECERA -->
+        <header id="cabezera" >
+                <input type="text" name="usuario">
+                <button onclick=" ingresarG()" id="ingresar"> Registrar</button>
+        </header>
+         <!-- EMPEZAR EL JUEGO -->
+        <div id="startG" style="display: none;">
+            <p>Empezar Juego</p>
+            <button onclick="EmpezarJ()" id="startJ"> Aceptar </button>
+            <button onclick="CancelJ()" id="cancelJ"> Cancelar </button>
+
+        </div>
+        <div id="finG" style="display: none;"></div>
+    <!-- RESULTADOS -->
+    <section id="preguntas" style="display: none;">
+        <div id="contenedor1"><!-- Nos permite ver el marcador -->
+            <h3>PREGUNTAS</h3>
+            <p>1.¿Cuál es la bebida preferida de Gonzalo? <br> 1. Agua <br> 2. Cerveza <br> 3. Vino</p> 
+            <p>Respuesta:</p> <input type="text" name="ans1">
+        </div>
+        <div id="contenedor2"><!-- Nos permite ver el marcador -->
+            <h3>PREGUNTAS</h3>
+            <p>2.¿Qué es lo que más le gusta hacer a Lulú? <br> A. Cantar <br> B. Dibujar <br> C. Programar</p> 
+            <p>Respuesta:</p> <input type="text" name="ans2">
+        </div>
+ 
+        <button onclick="Jugar()" id="continuar"> Mostrar Resultados</button>
+    </section>
+    
+    <section id="respuestas" style="display: none;">
+            
+            <div id="contenedorPrincipal"><!-- Nos permite ver el marcador -->
+                <h3>RESULTADOS</h3>
+                <div id="respuestasCorrectas" class="marcador">
+                    
+                </div><!-- Se visualizan las respuestas correctas -->
+                <div id="respuestasIncorrectas"  class="marcador">
+                    
+                </div><!-- Nos permite visualizar las respuestas incorrectas -->
+            </div>
+    </section>
+    <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
